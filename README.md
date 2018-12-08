@@ -21,7 +21,7 @@ Copy this file to $HOME/fetch_credentials.sh and chmod 755
 
 ```bash
 #!/bin/bash
-token=$(curl http://169.254.169.254/computeMetadata/v1/instance/service-accounts/rmanyari10@gmail.com/token | jq -r '.access_token')
+token=$(curl http://169.254.169.254/computeMetadata/v1/instance/service-accounts/$LOGNAME@gmail.com/token | jq -r '.access_token')
 echo "{ \"SessionToken\": \"$token\", \"Version\": 1, \"AccessKeyId\": \"none\", \"SecretAccessKey\": \"none\" }"
 ```
 
@@ -43,7 +43,7 @@ fi
 ### See it work!
 
 ```bash
-> (boto3-gcp) python main.py
+> (boto3-gcp-test) python main.py
 ```
 
 ### How does it work?
