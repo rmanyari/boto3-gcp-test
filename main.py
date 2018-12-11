@@ -14,12 +14,11 @@ token_url = '%s%s' % (metadata_url, service_account_path)
 
 def fetch_token():
     resp = requests.get(token_url)
-    return rest.text
+    return resp.json()['access_token']
 
-def sign_with_service_account(req, **kwargs):
+def sign_with_service_account(request, **kwargs):
     token = fetch_token()
-    print('Firing out request with %s bearer token' % token)
-    req.headers['Authorization'] = 'Bearer %s' % token
+    request.headers['Authorization'] = 'Bearer %s' % token
 
 session = Session(region_name='us-central1')
 
