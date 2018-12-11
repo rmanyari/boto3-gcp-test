@@ -1,2 +1,2 @@
--e git://github.com/rmanyari/botocore.git@custom-credential-provider#egg=botocore
+-e git://github.com/boto/botocore.git@develop#egg=botocore
 boto3==1.9.62
