@@ -1,2 +1,3 @@
--e git://github.com/boto/botocore.git@develop#egg=botocore
 boto3==1.9.62
+-e git://github.com/boto/botocore.git@d286246349f7d8e62229fd035e59d7ca1bc297bb#egg=botocore
+requests==2.21.0
