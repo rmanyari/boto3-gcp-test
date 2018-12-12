@@ -4,6 +4,7 @@ from botocore.session import Session as BotocoreSession
 from botocore import UNSIGNED
 from botocore.handlers import set_list_objects_encoding_type_url
 
+import os
 import boto3
 import requests
 
